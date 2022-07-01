@@ -13,15 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: Eric Manning
+email: ericmm@princeton.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+  Personal website of Eric Manning,
+  Ph.D. Candidate in the Department of Politics at Princeton University.
+twitter_username: EManning325
+github_username: ericmanning
+minimal_mistakes_skin: default #"default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 search: true
 
 # Build settings
@@ -30,8 +29,8 @@ remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+paginate_path: tutorials/page:num
+timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
@@ -58,34 +57,28 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Eric Manning"
+  avatar : "/assets/images/profile.png"
+  bio    : "Ph.D. Candidate<br>Department of Politics<br>Princeton University"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:ericmm@princeton.edu"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/EManning325"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/ericmanning"
 
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/EManning325"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/ericmanning"
 
 defaults:
   # _posts
@@ -94,9 +87,11 @@ defaults:
       type: posts
     values:
       layout: single
+      classes: wide
       author_profile: true
-      read_time: true
-      comments: true
+      show_date: true
+      read_time: false
+      comments: false
       share: true
       related: true
   # _pages
@@ -105,11 +100,31 @@ defaults:
       type: pages
     values:
       layout: single
+      classes: wide
       author_profile: true
 
-category_archive:
-  type: liquid
-  path: /categories/
+# Social
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/#twitter-cards-and-facebook-open-graph
+og_image: /assets/images/profile.png
+
+# Analytics
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/#analytics
+#analytics:
+#  provider: "google-gtag"
+#  google:
+#    tracking_id: "UXXXXXXXXX"
+#    anonymize_ip: false # default
+
+# Comments
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/#disqus
+#comments:
+#  provider: "disqus"
+#  disqus:
+#    shortname: "XXXXXXXXXXXXXX"
+
 tag_archive:
   type: liquid
-  path: /tags/
+  path: /tutorials/tag-archive/
+
+#
+#exclude: ['*.Rmd']
