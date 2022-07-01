@@ -128,3 +128,5 @@ tag_archive:
 
 #
 #exclude: ['*.Rmd']
+
+theme: jekyll-theme-minimal
