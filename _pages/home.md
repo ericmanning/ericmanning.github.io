@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome"
+title: "Eric Manning"
 author_profile: true
 classes: wide
 ---
